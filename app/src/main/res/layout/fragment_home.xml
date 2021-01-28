@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5.5"
+    tools:context="app.integro.sjbhs.fragments.FragmentHome">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5sp"
+            android:weightSum="4.8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:layout_marginBottom="5sp">
+
+                <com.github.demono.AutoScrollViewPager
+                    android:id="@+id/vpCoverPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp"
+                    android:gravity="bottom|end"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="#e2d4d4d4"
+                        android:src="@drawable/logo143" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#e2d4d4d4"
+                        android:gravity="bottom|center|end"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="SJBHS"
+                        android:textColor="@color/colorBackground"
+                        android:textSize="30dp"
+                        app:fontFamily="@string/font_Title" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackground"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="0.5"
+                        android:padding="7sp"
+                        android:src="@drawable/nn1" />
+
+                    <TextView
+                        android:id="@+id/tvAnnouncements"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center|start"
+                        android:text="ANNOUNCEMENTS"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@string/font_Title" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.3sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="0.5"
+                        android:padding="7sp"
+                        android:src="@drawable/ic_login" />
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center|start"
+                        android:paddingLeft="10sp"
+                        android:text="LOGIN"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@string/font_Title" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:gravity="center|start"
+                android:paddingLeft="45sp"
+                android:text="COLLEGE NEWS"
+                android:textColor="@color/colorBackground"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:fontFamily="@string/font_Title" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:layout_marginBottom="5sp"
+                app:cardCornerRadius="5sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.github.demono.AutoScrollViewPager
+                        android:id="@+id/vpNews"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="2sp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginRight="5sp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/colorBackground"
+                            app:contentPaddingRight="3sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#ececec"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <ImageView
+                                    android:layout_width="0sp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:padding="7sp"
+                                    android:src="@drawable/ic_institutions" />
+
+                                <TextView
+                                    android:id="@+id/tvEvents"
+                                    android:layout_width="0sp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:background="@drawable/text_link_selector_bg"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="2sp"
+                                    android:text="EVENTS"
+                                    android:textColor="@color/colorBackground"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@string/font_Title" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginRight="5sp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/colorBackground"
+                            app:contentPaddingRight="3sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ececec"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="0sp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:padding="5sp"
+                                    android:src="@drawable/ic_events" />
+
+                                <TextView
+                                    android:id="@+id/tvNewsLetter"
+                                    android:layout_width="0sp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:background="@drawable/text_link_selector_bg"
+                                    android:clickable="true"
+                                    android:gravity="center|start"
+                                    android:text="NEWS LETTERS"
+                                    android:textColor="@color/colorBackground"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="@string/font_Title" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginRight="5sp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/colorPrimaryDark"
+                            app:contentPaddingRight="3sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:background="@color/colorOrange"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="0sp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:padding="3sp"
+                                        android:src="@drawable/ic_departments2" />
+
+                                    <TextView
+                                        android:layout_width="0sp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.5"
+                                        android:background="@drawable/text_link_selector_bg"
+                                        android:gravity="center|start"
+                                        android:text="E_LEARNING"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"
+                                        app:fontFamily="@string/font_Title" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.github.demono.AutoScrollViewPager
+                android:id="@+id/vpTextMessage"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_marginBottom="5sp"
+                app:cardBackgroundColor="@color/colorBackground"
+                app:contentPadding="0.1sp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250sp">
+
+                <FrameLayout
+                    android:id="@+id/youtube_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

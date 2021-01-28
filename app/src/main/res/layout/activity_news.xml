@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="app.integro.sjbhs.fragments.NewsFragment">
+
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="centerCrop"
+         android:src="@drawable/back3" />
+
+    <TextView
+        android:id="@+id/tvNoItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorBackground"
+        android:textSize="25sp"
+        app:fontFamily="@string/font_Title"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

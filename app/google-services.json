@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "567234430307",
+    "firebase_url": "https://st-sjbhs.firebaseio.com",
+    "project_id": "st-sjbhs",
+    "storage_bucket": "st-sjbhs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567234430307:android:89e5773a82d7ea04",
+        "android_client_info": {
+          "package_name": "app.integro.sjbhs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567234430307-rqg3qkeei4avoqfm052iaacb7p07i7kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtQUDYKYBu_DG5xQgvH3Qm506qvIqhQ0o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

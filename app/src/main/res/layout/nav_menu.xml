@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingBottom="5sp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="2.5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bangalore2" />
+
+        <com.github.demono.AutoScrollViewPager
+            android:id="@+id/vpLeaderShip"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_margin="5sp"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="5sp">
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_link_selector_bg"
+                android:clickable="true"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:gravity="center|start"
+                android:paddingLeft="15sp"
+                android:text="About Us"
+                android:textColor="@color/colorBackground"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:fontFamily="@string/font_Title" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_margin="5sp"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="5sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_link_selector_bg"
+                android:clickable="true"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:gravity="center|start"
+                android:paddingLeft="15sp"
+                android:onClick="getPta"
+                android:text="PTA / MANAGEMENT"
+                android:textColor="@color/colorBackground"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:fontFamily="@string/font_Title" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_margin="5sp"
+                android:layout_weight="0.5"
+                app:cardBackgroundColor="@color/colorBackground"
+                app:contentPadding="1sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/llGallery"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="5sp"
+                            android:src="@drawable/gallery" />
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center|start"
+                            android:paddingLeft="10sp"
+                            android:text="Photos"
+                            android:textColor="@color/colorBackground"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@string/font_Title" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@color/colorBackground" />
+
+                    <LinearLayout
+                        android:id="@+id/llVideos"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/text_link_selector_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="5sp"
+                            android:src="@drawable/videos" />
+
+                        <TextView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center|start"
+                            android:paddingLeft="10sp"
+                            android:text="Videos"
+                            android:textColor="@color/colorBackground"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@string/font_Title" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="0sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="0.5"
+            app:cardBackgroundColor="@color/colorBackground"
+            app:contentPadding="1sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:onClick="facebook"
+                    android:src="@drawable/facebbok" />
+
+                <View
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/colorBackground" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:onClick="instagram"
+                    android:src="@drawable/insta" />
+
+                <View
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/colorBackground" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:onClick="youtube"
+                    android:src="@drawable/youtube" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="0sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="0.5"
+            app:cardBackgroundColor="@color/colorBackground"
+            app:contentPadding="1sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/ivCall"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:padding="20sp"
+                    android:src="@drawable/ic_phone_icon" />
+
+                <View
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/colorBackground" />
+
+                <ImageView
+                    android:id="@+id/ivEmail"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:padding="20sp"
+                    android:src="@drawable/email123" />
+
+                <View
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@color/colorBackground" />
+
+                <ImageView
+                    android:id="@+id/ivGps"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_link_selector_bg"
+                    android:clickable="true"
+                    android:padding="20sp"
+                    android:src="@drawable/ic_gps" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

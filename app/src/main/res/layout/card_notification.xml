@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardCornerRadius="10sp"
+        app:contentPaddingLeft="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end|center"
+                android:paddingTop="10sp"
+                android:paddingRight="15sp"
+                android:text="Date"
+                app:fontFamily="@string/font_Description"
+                android:textColor="@color/colorOrange"
+                android:textStyle="italic"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:paddingBottom="5sp"
+                app:fontFamily="@string/font_Title"
+                android:text="Title"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:background="@color/colorOrange" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                app:fontFamily="@string/font_Description"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:paddingTop="10sp"
+                android:text="Description"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvWeblink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                app:fontFamily="@string/font_Description"
+                android:padding="10sp"
+                android:text="weblink"
+                android:textColor="@color/colorOrange"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

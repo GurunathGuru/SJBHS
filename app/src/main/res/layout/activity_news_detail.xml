@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.integro.sjbhs.NewsDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            app:cardBackgroundColor="@color/colorBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_placeholder"
+                    android:visibility="gone" />
+
+                <com.github.demono.AutoScrollViewPager
+                    android:id="@+id/vpNewsImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="315sp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|end"
+                    android:paddingRight="10sp"
+                    android:text="Date"
+                    app:fontFamily="@string/font_Description"
+                    android:textColor="@color/colorOrange"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text="Title"
+                    app:fontFamily="@string/font_Title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorOrange" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:gravity="center|start"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    app:fontFamily="@string/font_Description"
+                    android:paddingBottom="10sp"
+                    android:text="Description"
+                    android:textColor="#FFF"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:gravity="center"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text="SHARE"
+                    app:fontFamily="@string/font_Title"
+                    android:textColor="@color/colorBackground"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

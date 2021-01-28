@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion 30
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        applicationId "app.integro.sjbhs"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.0"
+        multiDexEnabled true //Add this
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //noinspection GradleCompatible
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'junit:junit:4.13.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+    implementation 'com.victor:lib:1.0.4'
+    implementation 'com.github.demoNo:AutoScrollViewPager:v1.0.2'
+
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    //noinspection UseOfBundledGooglePlayServices,GradleCompatible
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+}
+

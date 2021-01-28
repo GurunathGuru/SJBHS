@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_leadership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="0.6"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_placeholder" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start|bottom"
+                    android:text="Title"
+                    android:minLines="2"
+                    android:maxLines="3"
+                    android:padding="10sp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@string/font_Title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:background="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingTop="5sp"
+                    android:gravity="center|start"
+                    android:minLines="2"
+                    android:maxLines="3"
+                    android:text="Title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    app:fontFamily="@string/font_Description" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

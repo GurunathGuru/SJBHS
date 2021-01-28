@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="25sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/college_building" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#83000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15sp"
+        android:background="@drawable/border2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:src="@drawable/logo143" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ST. JOSEPH'S BOYS' HIGH SCHOOL"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:fontFamily="@string/font_Title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="27 Museum Road Bengaluru 560 025\nPhone No : +91 80 2221 4416"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:fontFamily="@string/font_Description" />
+    </LinearLayout>
+</RelativeLayout>

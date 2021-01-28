@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.integro.sjbhs.fragments.NewsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5sp"
+        android:orientation="vertical"
+        android:weightSum="5.5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingBottom="1sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.github.demono.AutoScrollViewPager
+                    android:id="@+id/vpAlumni"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvAlumni"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/cardBackgroundColor"
+                    android:fontFamily="@string/font_Title"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="20sp"
+                    android:text="Alumni"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|top"
+                android:weightSum="2">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1.545">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/sjbhs_btn" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@string/font_Title"
+                            android:gravity="center"
+                            android:paddingLeft="15sp"
+                            android:text="Once a JOSEPHITE\nalways a JOSEPHITE"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.github.demono.AutoScrollViewPager
+            android:id="@+id/vpTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="0.5" />
+
+        <com.github.demono.AutoScrollViewPager
+            android:id="@+id/vpUpComingEvents"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:background="@drawable/border2"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1.3"
+                    android:onClick="openAdmissions"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/addmission2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="0.7"
+                    android:background="@color/colorBackground"
+                    android:fontFamily="@string/font_Title"
+                    android:gravity="center"
+                    android:onClick="openAdmissions"
+                    android:text="Admissions"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border2"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1.3"
+                    android:clickable="true"
+                    android:onClick="openSportsAndCurricular"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sports" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="0.7"
+                    android:background="@color/colorBackground"
+                    android:fontFamily="@string/font_Title"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="openSportsAndCurricular"
+                    android:text="Sports and Co-Curricular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="0.5"
+            android:background="@color/colorOrange"
+            android:fontFamily="@string/font_Title"
+            android:gravity="center"
+            android:text="Support for a  Cause"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

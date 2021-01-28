@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5sp"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardElevation="5sp">
+
+        <TextView
+            android:id="@+id/tvTextMessage"
+            app:fontFamily="@string/font_Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/text_link_selector_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:minLines="3"
+            android:text="NEWS LETTERS"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
