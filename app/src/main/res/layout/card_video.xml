@@ -46,5 +46,5 @@
         android:textColor="@color/colorWhite"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:fontFamily="@string/font_Title" />
+        android:fontFamily="@string/font_Title" />
 </RelativeLayout>

@@ -55,7 +55,7 @@
                     android:textColor="@color/colorOrange"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:fontFamily="@string/font_Title" />
+                    app:fontFamily="@string/font_Description" />
             </LinearLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

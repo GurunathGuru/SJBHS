@@ -33,6 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center"
+                    android:fontFamily="@string/font_Title"
                     android:gravity="center"
                     android:text="EVENT OF THE MONTH"
                     android:textColor="@color/colorBackground"
@@ -46,9 +47,9 @@
                     android:background="@color/colorBackground"
                     android:fontFamily="@string/font_Title"
                     android:gravity="center"
+                    android:maxLines="2"
                     android:paddingLeft="5sp"
                     android:paddingRight="5sp"
-                    android:maxLines="2"
                     android:text="CHILDREN'S DAY\n 14th Nov"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp" />

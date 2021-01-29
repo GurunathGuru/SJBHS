@@ -34,7 +34,7 @@
                 android:textColor="@color/colorOrange"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                app:fontFamily="@string/font_Title" />
+                android:fontFamily="@string/font_Title" />
 
             <View
                 android:layout_width="match_parent"
@@ -47,27 +47,24 @@
                 android:layout_height="wrap_content"
                 android:gravity="center|start"
                 android:padding="10dp"
-                android:layout_marginBottom="10sp"
                 android:text="Title"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:fontFamily="@string/font_Description" />
+                android:fontFamily="@string/font_Description" />
 
             <TextView
                 android:id="@+id/tvAddToCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginBottom="10sp"
+                android:layout_margin="10sp"
                 android:background="@color/colorOrange"
                 android:fontFamily="@string/font_Title"
                 android:gravity="center"
-                android:minLines="2"
+                android:padding="10dp"
                 android:text="Add to Calender"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

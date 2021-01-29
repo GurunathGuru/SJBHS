@@ -27,14 +27,28 @@
                 android:id="@+id/tvDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@string/font_Description"
                 android:gravity="center|end"
                 android:paddingTop="5dp"
                 android:paddingRight="10sp"
                 android:text="Date"
-                app:fontFamily="@string/font_Description"
                 android:textColor="@color/colorOrange"
-                android:textStyle="italic"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_Title"
+                android:gravity="center|start"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:paddingBottom="10dp"
+                android:text="Title"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
@@ -43,33 +57,18 @@
                 android:background="@color/colorOrange" />
 
             <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center|start"
-                android:paddingLeft="10sp"
-                android:paddingRight="10sp"
-                android:paddingBottom="10dp"
-                android:text="Title"
-                app:fontFamily="@string/font_Title"
-                android:textColor="@color/colorWhite"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@string/font_Description"
                 android:gravity="center|start"
+                android:maxLines="3"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:paddingBottom="10dp"
                 android:text="Title"
-                android:maxLines="3"
-                app:fontFamily="@string/font_Description"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textSize="15sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

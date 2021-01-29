@@ -35,15 +35,15 @@
                     android:id="@+id/tvTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_Title"
                     android:gravity="center|start|bottom"
-                    android:text="Title"
-                    android:minLines="2"
                     android:maxLines="3"
+                    android:minLines="2"
                     android:padding="10sp"
+                    android:text="Title"
                     android:textColor="@color/colorWhite"
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@string/font_Title" />
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
@@ -56,16 +56,16 @@
                     android:id="@+id/tvDesignation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                   android:paddingLeft="10sp"
-                    android:paddingRight="10sp"
-                    android:paddingTop="5sp"
+                    android:fontFamily="@string/font_Description"
                     android:gravity="center|start"
-                    android:minLines="2"
                     android:maxLines="3"
+                    android:minLines="2"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="10sp"
                     android:text="Title"
                     android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    app:fontFamily="@string/font_Description" />
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5sp"
         android:layout_marginTop="5sp"
-        app:cardBackgroundColor="@color/colorWhite"
+        app:cardBackgroundColor="@color/colorBackground"
         android:layout_marginRight="5sp"
         app:cardCornerRadius="5dp">
 
@@ -39,9 +39,9 @@
                 android:layout_marginBottom="10sp"
                 android:padding="10sp"
                 android:fontFamily="@string/font_Title"
-                android:gravity="center"
+                android:gravity="center|start"
                 android:text="Title"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textSize="17sp" />
 
             <TextView
