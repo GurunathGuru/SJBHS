@@ -36,7 +36,7 @@
                     android:fontFamily="@string/font_Title"
                     android:gravity="center"
                     android:text="EVENT OF THE MONTH"
-                    android:textColor="@color/colorBackground"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
                 <TextView
@@ -44,7 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0sp"
                     android:layout_weight="1.5"
-                    android:background="@color/colorBackground"
+                    android:background="@color/colorPrimary"
                     android:fontFamily="@string/font_Title"
                     android:gravity="center"
                     android:maxLines="2"

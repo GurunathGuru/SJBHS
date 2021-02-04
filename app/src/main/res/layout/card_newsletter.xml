@@ -10,7 +10,7 @@
         android:layout_marginLeft="5sp"
         android:layout_marginTop="5sp"
         android:layout_marginRight="5sp"
-        app:cardBackgroundColor="@color/colorBackground"
+        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="5sp">
 
         <LinearLayout

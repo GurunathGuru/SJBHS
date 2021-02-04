@@ -2,9 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    android:paddingBottom="5sp">
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
@@ -51,8 +49,8 @@
                 android:gravity="center|start"
                 android:paddingLeft="15sp"
                 android:text="ABOUT US"
-                android:textColor="@color/colorBackground"
-                android:textSize="17sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:fontFamily="@string/font_Title" />
         </androidx.cardview.widget.CardView>
@@ -72,11 +70,11 @@
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_arrow_right"
                 android:gravity="center|start"
-                android:paddingLeft="15sp"
                 android:onClick="getPta"
-                android:text="PTA / MANAGEMENT"
-                android:textColor="@color/colorBackground"
-                android:textSize="17sp"
+                android:paddingLeft="15sp"
+                android:text="PTA"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:fontFamily="@string/font_Title" />
         </androidx.cardview.widget.CardView>
@@ -92,7 +90,7 @@
                 android:layout_height="0sp"
                 android:layout_margin="5sp"
                 android:layout_weight="0.5"
-                app:cardBackgroundColor="@color/colorBackground"
+                app:cardBackgroundColor="@color/colorPrimary"
                 app:contentPadding="1sp">
 
                 <LinearLayout
@@ -116,7 +114,6 @@
                             android:layout_width="0sp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5"
-                            android:padding="5sp"
                             android:src="@drawable/gallery" />
 
                         <TextView
@@ -126,8 +123,8 @@
                             android:gravity="center|start"
                             android:paddingLeft="10sp"
                             android:text="PHOTOS"
-                            android:textColor="@color/colorBackground"
-                            android:textSize="17sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             app:fontFamily="@string/font_Title" />
                     </LinearLayout>
@@ -137,7 +134,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="10sp"
                         android:layout_marginBottom="10sp"
-                        android:background="@color/colorBackground" />
+                        android:background="@color/colorPrimary" />
 
                     <LinearLayout
                         android:id="@+id/llVideos"
@@ -153,7 +150,6 @@
                             android:layout_width="0sp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5"
-                            android:padding="5sp"
                             android:src="@drawable/videos" />
 
                         <TextView
@@ -163,8 +159,8 @@
                             android:gravity="center|start"
                             android:paddingLeft="10sp"
                             android:text="VIDEOS"
-                            android:textColor="@color/colorBackground"
-                            android:textSize="17sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             app:fontFamily="@string/font_Title" />
                     </LinearLayout>
@@ -173,13 +169,13 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0sp"
             android:layout_marginLeft="5sp"
             android:layout_marginRight="5sp"
             android:layout_marginBottom="5sp"
             android:layout_weight="0.5"
-            app:cardBackgroundColor="@color/colorBackground"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:contentPadding="1sp">
 
             <LinearLayout
@@ -203,7 +199,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10sp"
                     android:layout_marginBottom="10sp"
-                    android:background="@color/colorBackground" />
+                    android:background="@color/colorPrimary" />
 
                 <ImageView
                     android:layout_width="0sp"
@@ -219,7 +215,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10sp"
                     android:layout_marginBottom="10sp"
-                    android:background="@color/colorBackground" />
+                    android:background="@color/colorPrimary" />
 
                 <ImageView
                     android:layout_width="0sp"
@@ -234,13 +230,13 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0sp"
             android:layout_marginLeft="5sp"
             android:layout_marginRight="5sp"
             android:layout_marginBottom="5sp"
             android:layout_weight="0.5"
-            app:cardBackgroundColor="@color/colorBackground"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:contentPadding="1sp">
 
             <LinearLayout
@@ -257,7 +253,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/text_link_selector_bg"
                     android:clickable="true"
-                    android:padding="20sp"
                     android:src="@drawable/ic_phone_icon" />
 
                 <View
@@ -265,7 +260,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10sp"
                     android:layout_marginBottom="10sp"
-                    android:background="@color/colorBackground" />
+                    android:background="@color/colorPrimary" />
 
                 <ImageView
                     android:id="@+id/ivEmail"
@@ -274,7 +269,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/text_link_selector_bg"
                     android:clickable="true"
-                    android:padding="20sp"
                     android:src="@drawable/email123" />
 
                 <View
@@ -282,7 +276,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10sp"
                     android:layout_marginBottom="10sp"
-                    android:background="@color/colorBackground" />
+                    android:background="@color/colorPrimary" />
 
                 <ImageView
                     android:id="@+id/ivGps"
@@ -291,7 +285,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/text_link_selector_bg"
                     android:clickable="true"
-                    android:padding="20sp"
                     android:src="@drawable/ic_gps" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

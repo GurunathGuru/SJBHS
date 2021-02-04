@@ -42,9 +42,9 @@
                     android:fontFamily="@string/font_Title"
                     android:gravity="center|bottom"
                     android:paddingBottom="20sp"
-                    android:text="Alumni"
-                    android:textColor="@color/colorBackground"
-                    android:textSize="20sp" />
+                    android:text="ALUMNI"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,20 +129,19 @@
                     android:layout_weight="1.3"
                     android:onClick="openAdmissions"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/addmission2"
+                    android:src="@drawable/elearning"
                     tools:ignore="OnClick" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0sp"
                     android:layout_weight="0.7"
-                    android:background="@color/colorBackground"
+                    android:background="@color/colorPrimary"
                     android:fontFamily="@string/font_Title"
                     android:gravity="center"
-                    android:onClick="openAdmissions"
-                    android:text="Admissions"
+                    android:text="E_LEARNING"
                     android:textColor="@color/colorWhite"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     tools:ignore="OnClick" />
             </LinearLayout>
 
@@ -169,14 +168,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="0sp"
                     android:layout_weight="0.7"
-                    android:background="@color/colorBackground"
+                    android:background="@color/colorPrimary"
+                    android:clickable="true"
                     android:fontFamily="@string/font_Title"
                     android:gravity="center"
-                    android:clickable="true"
                     android:onClick="openSportsAndCurricular"
-                    android:text="Sports and Co-Curricular"
+                    android:text="SPORTS AND CO-CURRICULAR"
                     android:textColor="@color/colorWhite"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     tools:ignore="OnClick" />
             </LinearLayout>
         </LinearLayout>
@@ -189,8 +188,8 @@
             android:background="@color/colorOrange"
             android:fontFamily="@string/font_Title"
             android:gravity="center"
-            android:text="Support for a  Cause"
+            android:text="SUPPORT FOR A  CAUSE"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 </RelativeLayout>

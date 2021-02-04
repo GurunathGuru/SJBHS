@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
-            app:cardBackgroundColor="@color/colorBackground">
+            app:cardBackgroundColor="@color/colorPrimary">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,7 +79,6 @@
                     android:paddingLeft="10sp"
                     android:paddingRight="10sp"
                     app:fontFamily="@string/font_Description"
-                    android:paddingBottom="10sp"
                     android:text="Description"
                     android:textColor="#FFF"
                     android:textSize="12sp" />
@@ -94,7 +93,7 @@
                     android:paddingRight="10sp"
                     android:text="SHARE"
                     app:fontFamily="@string/font_Title"
-                    android:textColor="@color/colorBackground"
+                    android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

@@ -3,6 +3,7 @@ package app.integro.sjbhs;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -63,10 +65,10 @@ public class MainActivity extends AppCompatActivity
         leadershipArrayList = new ArrayList<>();
         vpLeaderShip.startAutoScroll(3000);
         vpLeaderShip.setCycle(true);
+
         getLeadershipList();
 
         TextView tvAboutUs = findViewById(R.id.tvAboutUs);
-        TextView tvLogin = findViewById(R.id.tvLogin);
         ImageView ivCall = findViewById(R.id.ivCall);
         ImageView ivEmail = findViewById(R.id.ivEmail);
         ImageView ivGps = findViewById(R.id.ivGps);
@@ -81,6 +83,23 @@ public class MainActivity extends AppCompatActivity
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_n1);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_nt1);
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_w2);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                tab.getIcon().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.colorOrange), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                tab.getIcon().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -123,12 +142,14 @@ public class MainActivity extends AppCompatActivity
                 phoneNumbers();
             }
         });
+
         ivEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendEmail();
             }
         });
+
         ivGps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -194,34 +215,30 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void sendEmail() {
-        Intent i = new Intent(Intent.ACTION_SEND);
-        i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"sjmch.infodesk@stjohns.in"});
-        i.putExtra(Intent.EXTRA_SUBJECT, "");
-        i.putExtra(Intent.EXTRA_TEXT, "");
-        try {
-            startActivity(Intent.createChooser(i, "Send mail..."));
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-        }
+        Intent mailintent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("mailto:?subject" + " " + "&body" + " " + "&to=" + "principal@sjbhs.edu.in");
+        mailintent.setData(data);
+        startActivity(mailintent);
     }
 
     public void phoneNumbers() {
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        View view = getLayoutInflater().inflate(R.layout.custom_dialog_menu, null);
+        View view = getLayoutInflater().inflate(R.layout.card_call_menu, null);
         dialogBuilder.setView(view);
 
         final AlertDialog alertDialog = dialogBuilder.create();
-        TextView tvText = (TextView) view.findViewById(R.id.tvParent);
-        TextView tvText1 = (TextView) view.findViewById(R.id.tvFaculty);
+        TextView tvNum1 = view.findViewById(R.id.tvNum1);
+        TextView tvNum2 = view.findViewById(R.id.tvNum2);
+        TextView tvNum3 = view.findViewById(R.id.tvNum3);
 
-        tvText.setText("+91 080 22065000");
-        tvText1.setText("+91 080 22065001");
+        tvNum1.setText("+91 8884200548");
+        tvNum2.setText("+91 8884200549");
+        tvNum3.setText("+91 080 22214416");
 
-        tvText.setOnClickListener(new View.OnClickListener() {
+        tvNum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "tel:+91 080 22065000";
+                String url = "tel:+91 8884200548";
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
@@ -231,10 +248,23 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        tvText1.setOnClickListener(new View.OnClickListener() {
+        tvNum2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "tel:+91 080 22065001";
+                String url = "tel:+91 8884200549";
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(intent);
+                alertDialog.dismiss();
+            }
+        });
+
+        tvNum3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "tel:+91 080 22214416";
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;

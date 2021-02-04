@@ -39,34 +39,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5sp"
-                    android:gravity="bottom|end"
+                    android:gravity="top|start"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
+                        android:layout_width="75sp"
+                        android:layout_height="75sp"
                         android:layout_marginBottom="5sp"
                         android:background="#e2d4d4d4"
                         android:src="@drawable/logo143" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#e2d4d4d4"
-                        android:gravity="bottom|center|end"
-                        android:paddingLeft="10sp"
-                        android:paddingRight="10sp"
-                        android:text="SJBHS"
-                        android:textColor="@color/colorBackground"
-                        android:textSize="30dp"
-                        app:fontFamily="@string/font_Title" />
                 </LinearLayout>
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@color/colorBackground"
+                android:background="@color/colorPrimary"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -134,16 +123,23 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="25sp"
-                android:gravity="center|start"
-                android:paddingLeft="45sp"
-                android:text="COLLEGE NEWS"
-                android:textColor="@color/colorBackground"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:fontFamily="@string/font_Title" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@string/font_Title"
+                    android:gravity="center"
+                    android:text="SCHOOL NEWS"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -166,7 +162,7 @@
                     <View
                         android:layout_width="2sp"
                         android:layout_height="match_parent"
-                        android:background="@color/colorBackground" />
+                        android:background="@color/colorPrimary" />
 
                     <LinearLayout
                         android:layout_width="0sp"
@@ -181,7 +177,7 @@
                             android:layout_marginLeft="5sp"
                             android:layout_marginRight="5sp"
                             android:layout_weight="1"
-                            app:cardBackgroundColor="@color/colorBackground"
+                            app:cardBackgroundColor="@color/colorPrimary"
                             app:contentPaddingRight="3sp">
 
                             <LinearLayout
@@ -196,7 +192,6 @@
                                     android:layout_width="0sp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
-                                    android:padding="7sp"
                                     android:src="@drawable/ic_institutions" />
 
                                 <TextView
@@ -208,7 +203,7 @@
                                     android:gravity="center|start"
                                     android:paddingLeft="2sp"
                                     android:text="EVENTS"
-                                    android:textColor="@color/colorBackground"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="15sp"
                                     android:textStyle="bold"
                                     app:fontFamily="@string/font_Title" />
@@ -222,7 +217,7 @@
                             android:layout_marginTop="5sp"
                             android:layout_marginRight="5sp"
                             android:layout_weight="1"
-                            app:cardBackgroundColor="@color/colorBackground"
+                            app:cardBackgroundColor="@color/colorPrimary"
                             app:contentPaddingRight="3sp">
 
                             <LinearLayout
@@ -236,7 +231,6 @@
                                     android:layout_width="0sp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
-                                    android:padding="5sp"
                                     android:src="@drawable/ic_events" />
 
                                 <TextView
@@ -248,7 +242,7 @@
                                     android:clickable="true"
                                     android:gravity="center|start"
                                     android:text="NEWS LETTERS"
-                                    android:textColor="@color/colorBackground"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="15sp"
                                     android:textStyle="bold"
                                     app:fontFamily="@string/font_Title" />
@@ -263,19 +257,19 @@
                             android:layout_marginTop="5sp"
                             android:layout_marginRight="5sp"
                             android:layout_weight="1"
-                            app:cardBackgroundColor="@color/colorPrimaryDark"
+                            app:cardBackgroundColor="@color/colorPrimary"
                             app:contentPaddingRight="3sp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="@color/colorOrange"
                                 android:weightSum="2">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
+                                    android:background="@color/colorOrange"
                                     android:gravity="center"
                                     android:orientation="horizontal">
 
@@ -283,7 +277,7 @@
                                         android:layout_width="0sp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="0.5"
-                                        android:padding="3sp"
+                                        android:padding="5sp"
                                         android:src="@drawable/ic_departments2" />
 
                                     <TextView
@@ -292,7 +286,8 @@
                                         android:layout_weight="1.5"
                                         android:background="@drawable/text_link_selector_bg"
                                         android:gravity="center|start"
-                                        android:text="E_LEARNING"
+                                        android:onClick="openAdmissions"
+                                        android:text="ADMISSIONS"
                                         android:textColor="@color/colorWhite"
                                         android:textSize="15sp"
                                         android:textStyle="bold"
@@ -310,8 +305,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="80sp"
                 android:layout_marginBottom="5sp"
-                app:cardBackgroundColor="@color/colorBackground"
-                app:contentPadding="0.1sp"/>
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:contentPadding="0.1sp" />
 
 
             <RelativeLayout

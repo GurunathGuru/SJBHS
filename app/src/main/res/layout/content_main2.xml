@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorBackground"
+        android:background="@color/colorPrimary"
         android:visibility="gone"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -26,12 +26,12 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2sp"
-        android:background="@color/colorBackground" />
+        android:background="@color/colorPrimary" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/back3"
-        app:tabIndicatorColor="@color/colorBackground" />
+        app:tabIndicatorColor="@color/colorPrimary" />
 </LinearLayout>

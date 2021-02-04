@@ -26,7 +26,7 @@
             android:paddingLeft="10sp"
             android:minLines="2"
             android:drawableRight="@drawable/ic_arrow_right"
-            android:textColor="@color/colorBackground"
+            android:textColor="@color/colorPrimary"
             android:textSize="17sp"
             android:textStyle="bold"
             app:fontFamily="@string/font_Title" />
@@ -52,7 +52,7 @@
             android:gravity="center|start"
             android:paddingLeft="10sp"
             android:drawableRight="@drawable/ic_arrow_right"
-            android:textColor="@color/colorBackground"
+            android:textColor="@color/colorPrimary"
             android:textSize="17sp"
             android:textStyle="bold"
             app:fontFamily="@string/font_Title" />
