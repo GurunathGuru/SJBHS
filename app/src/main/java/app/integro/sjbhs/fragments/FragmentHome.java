@@ -48,9 +48,10 @@ import retrofit2.Response;
 
 public class FragmentHome extends Fragment {
 
+    private static final String TAG = "FragmentHome";
+
     private static final String API_KEY = "AIzaSyDI8lwUCJgNkMIOMYF9FaafwIWpKZ_J-ng";
     private YouTubePlayer mPlayer;
-    private static final String TAG = "FragmentHome";
     private ArrayList<Sjbhs_videos1> videosArrayList;
 
     private ApiServices apiServices;

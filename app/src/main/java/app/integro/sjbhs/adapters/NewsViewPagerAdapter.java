@@ -50,18 +50,15 @@ public class NewsViewPagerAdapter extends PagerAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.card_newsviewpager, container, false);
 
-        ivNews = (ImageView) itemView.findViewById(R.id.ivNews);
-        rlNews = (RelativeLayout) itemView.findViewById(R.id.rlNews);
-
-        tvNews = (TextView) itemView.findViewById(R.id.tvTitle);
-
-
+        ivNews =  itemView.findViewById(R.id.ivNews);
+        rlNews =  itemView.findViewById(R.id.rlNews);
+        tvNews =  itemView.findViewById(R.id.tvTitle);
         final News newsItem = newsArrayList.get(position);
 
-        tvNews.setText(newsArrayList.get(position).getTitle());
+        tvNews.setText(newsItem.getTitle());
 
         Glide.with(context)
-                .load(newsArrayList.get(position).getImage())
+                .load(newsItem.getImage())
                 .placeholder(R.drawable.bg_placeholder)
                 .into(ivNews);
         rlNews.setOnClickListener(new View.OnClickListener() {

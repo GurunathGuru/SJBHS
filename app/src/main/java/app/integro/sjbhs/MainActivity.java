@@ -1,5 +1,6 @@
 package app.integro.sjbhs;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -221,6 +222,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(mailintent);
     }
 
+    @SuppressLint("SetTextI18n")
     public void phoneNumbers() {
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         View view = getLayoutInflater().inflate(R.layout.card_call_menu, null);

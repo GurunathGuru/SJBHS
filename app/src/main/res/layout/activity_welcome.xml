@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="25sp"
         android:scaleType="centerCrop"
-        android:src="@drawable/college_building" />
+        android:src="@drawable/college_building2" />
 
     <View
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="ST. JOSEPH'S BOYS' HIGH SCHOOL"
+            android:text="ST. JOSEPH'S BOYS' HIGH SCHOOL\n(Estd 1858)"
             android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="27 Museum Road Bengaluru 560 025\nPhone No : +91 80 2221 4416"
+            android:text="27 Museum Road Bengaluru 560 025"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
             app:fontFamily="@string/font_Description" />
