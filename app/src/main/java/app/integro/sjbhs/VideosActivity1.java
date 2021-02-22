@@ -41,7 +41,6 @@ public class VideosActivity1 extends AppCompatActivity {
         tvNoItems = findViewById(R.id.tvNoItems);
 
         getVideosList();
-
     }
 
     public void getVideosList() {

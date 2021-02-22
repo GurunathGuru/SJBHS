@@ -33,18 +33,30 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
-                <TextView
-                    android:id="@+id/tvAlumni"
+                <LinearLayout
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/cardBackgroundColor"
-                    android:fontFamily="@string/font_Title"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="20sp"
-                    android:text="ALUMNI"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15sp" />
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="1.54" />
+
+                    <TextView
+                        android:id="@+id/tvAlumni"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="0.46"
+                        android:background="@color/cardBackgroundColor"
+                        android:fontFamily="@string/font_Title"
+                        android:gravity="center"
+                        android:text="ALUMNI"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout

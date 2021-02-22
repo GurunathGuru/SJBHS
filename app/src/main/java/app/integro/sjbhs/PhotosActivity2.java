@@ -25,7 +25,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PhotosActivity2 extends AppCompatActivity {
-
+    private static final String TAG = "PhotosActivity2";
     private RecyclerView rvPhotos;
     private ArrayList<Sjbhs_Photos2> photos1ArrayList;
     private PhotosAdapter2 adapter;
@@ -40,7 +40,7 @@ public class PhotosActivity2 extends AppCompatActivity {
 
         Sjbhs_photos1 sjbhsPhotos1 = (Sjbhs_photos1) getIntent().getSerializableExtra("data");
         photos_id = sjbhsPhotos1.getId();
-        Log.d("RESPONSE", "photos_id " + photos_id);
+        //Log.d("RESPONSE", "photos_id " + photos_id);
 
 
         photos1ArrayList = new ArrayList<>();
@@ -51,6 +51,7 @@ public class PhotosActivity2 extends AppCompatActivity {
     }
 
     public void getPhotosList() {
+        Log.d(TAG, "getPhotosList: "+photos_id);
         Call<Sjbhs_Photos2List> photos1ListCall = ApiClients.getClient().create(ApiServices.class).getSjbhs_photos1List(photos_id);
         photos1ListCall.enqueue(new Callback<Sjbhs_Photos2List>() {
             @Override

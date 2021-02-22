@@ -16,7 +16,7 @@ public class Sjbhs_Photos2List {
         this.sjbhsPhotos1ArrayList = sjbhsPhotos1ArrayList;
     }
 
-    @SerializedName("photoimages")
+    @SerializedName("newsimages")
     ArrayList<Sjbhs_Photos2> sjbhsPhotos1ArrayList;
 
     private String success;

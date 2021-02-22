@@ -51,7 +51,7 @@ public class PhotosAdapter3 extends PagerAdapter {
         ImageView ivCoverPhotos;
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View itemView = inflater.inflate(R.layout.card_coverphotos, container, false);
+        View itemView = inflater.inflate(R.layout.card_photos3, container, false);
         ivCoverPhotos = itemView.findViewById(R.id.ivCoverPhotos);
         Glide.with(context)
                 .load(sjbhsPhotos2ArrayList.get(position).getImage())

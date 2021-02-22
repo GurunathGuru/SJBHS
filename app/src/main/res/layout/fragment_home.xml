@@ -71,8 +71,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10sp"
                         android:layout_weight="0.5"
-                        android:padding="7sp"
-                        android:src="@drawable/nn1" />
+                        android:padding="3sp"
+                        android:src="@drawable/ann1" />
 
                     <TextView
                         android:id="@+id/tvAnnouncements"
@@ -83,6 +83,7 @@
                         android:text="ANNOUNCEMENTS"
                         android:textColor="@color/colorWhite"
                         android:textSize="15sp"
+                        android:paddingLeft="5sp"
                         android:textStyle="bold"
                         app:fontFamily="@string/font_Title" />
                 </LinearLayout>
@@ -291,7 +292,8 @@
                                         android:textColor="@color/colorWhite"
                                         android:textSize="15sp"
                                         android:textStyle="bold"
-                                        app:fontFamily="@string/font_Title" />
+                                        app:fontFamily="@string/font_Title"
+                                        tools:ignore="OnClick" />
                                 </LinearLayout>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>

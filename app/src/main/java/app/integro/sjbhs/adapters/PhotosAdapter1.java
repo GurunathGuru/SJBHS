@@ -36,7 +36,7 @@ public class PhotosAdapter1 extends RecyclerView.Adapter<PhotosAdapter1.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         final Sjbhs_photos1 sjbhs_photos1Item = photosArrayList.get(position);
-        holder.name.setText(sjbhs_photos1Item.getTitle());
+        holder.tvTitle.setText(sjbhs_photos1Item.getTitle());
 
         Glide.with(context)
                 .load(sjbhs_photos1Item.getImage())
@@ -61,12 +61,12 @@ public class PhotosAdapter1 extends RecyclerView.Adapter<PhotosAdapter1.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView name;
+        private final TextView tvTitle;
         private final ImageView ivImage;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.tvNoItems);
+            tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             ivImage = (ImageView) itemView.findViewById(R.id.ivPhotos);
         }
     }

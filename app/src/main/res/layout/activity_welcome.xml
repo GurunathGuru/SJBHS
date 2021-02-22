@@ -21,7 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="15sp"
+        android:layout_margin="10sp"
         android:background="@drawable/border2"
         android:gravity="center"
         android:orientation="vertical"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="ST. JOSEPH'S BOYS' HIGH SCHOOL\n(Estd 1858)"
+            android:text="ST JOSEPH'S BOYS' HIGH SCHOOL\n(Estd 1858)"
             android:textColor="@color/colorWhite"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -46,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="27 Museum Road Bengaluru 560 025"
-            android:textColor="@color/colorWhite"
+            android:text="Celebrating 163 Glorious Years"
+            android:textColor="@color/colorOrange"
             android:textSize="20sp"
             app:fontFamily="@string/font_Description" />
     </LinearLayout>
