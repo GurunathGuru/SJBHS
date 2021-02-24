@@ -18,13 +18,13 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import app.integro.sjbhs.NewsActivity;
-import app.integro.sjbhs.NewsDetailActivity;
 import app.integro.sjbhs.R;
 import app.integro.sjbhs.models.News;
 
 public class NewsViewPagerAdapter extends PagerAdapter {
     private final Context context;
     private final ArrayList<News> newsArrayList;
+    private static final String TAG = "NewsViewPagerAdapter";
 
     public NewsViewPagerAdapter(Context context, ArrayList<News> newsArrayList) {
         this.context = context;
@@ -50,13 +50,14 @@ public class NewsViewPagerAdapter extends PagerAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.card_newsviewpager, container, false);
 
-        ivNews =  itemView.findViewById(R.id.ivNews);
+        ivNews =  itemView.findViewById(R.id.ivImage);
         rlNews =  itemView.findViewById(R.id.rlNews);
         tvNews =  itemView.findViewById(R.id.tvTitle);
         final News newsItem = newsArrayList.get(position);
 
         tvNews.setText(newsItem.getTitle());
 
+       // Log.d(TAG, "instantiateItem: "+newsArrayList.get(0).getImage());
         Glide.with(context)
                 .load(newsItem.getImage())
                 .placeholder(R.drawable.bg_placeholder)

@@ -28,7 +28,7 @@
             android:padding="10dp"
             android:text="Name"
             android:textColor="@color/colorWhite"
-            android:textSize="25sp"
+            android:textSize="15sp"
             app:fontFamily="@string/font_Title" />
     </RelativeLayout>
 </RelativeLayout>

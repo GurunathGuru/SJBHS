@@ -41,7 +41,7 @@ public class NewsImagesViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView ivNews;
         View itemView = LayoutInflater.from(context).inflate(R.layout.card_newsimages, container, false);
-        ivNews = (ImageView) itemView.findViewById(R.id.ivNews);
+        ivNews = (ImageView) itemView.findViewById(R.id.ivImage);
         final NewsImages newsItem = newsImagesArrayList.get(position);
         Glide.with(context)
                 .load(newsImagesArrayList.get(position).getImage())

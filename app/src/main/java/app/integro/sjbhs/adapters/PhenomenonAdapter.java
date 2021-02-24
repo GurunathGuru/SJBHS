@@ -57,7 +57,7 @@ public class PhenomenonAdapter extends RecyclerView.Adapter<PhenomenonAdapter.My
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            ivNews = (ImageView) itemView.findViewById(R.id.ivNews);
+            ivNews = (ImageView) itemView.findViewById(R.id.ivImage);
             tvN_Title = (TextView) itemView.findViewById(R.id.tvTitle);
             tvDescription = (TextView) itemView.findViewById(R.id.tvDescription);
         }

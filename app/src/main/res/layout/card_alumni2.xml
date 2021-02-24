@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/ivNews"
+        android:id="@+id/ivImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -15,19 +15,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center|bottom"
+        android:onClick="getAlumni"
+        android:clickable="true"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="65sp"
+            android:layout_height="32.5sp"
             android:layout_marginTop="20dp"
             android:background="#8AFFFFFF"
             android:gravity="center"
+            android:maxLines="1"
             android:text="Title"
             android:textColor="@color/colorBlack"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="@string/font_Title" />
+
+        <TextView
+            android:id="@+id/tvDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="32.5sp"
+            android:background="#8AFFFFFF"
+            android:gravity="center"
+            android:paddingBottom="5sp"
+            android:text="Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
             android:fontFamily="@string/font_Title" />
     </LinearLayout>
 </RelativeLayout>

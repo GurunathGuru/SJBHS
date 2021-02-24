@@ -79,7 +79,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            ivNews = (ImageView) itemView.findViewById(R.id.ivNews);
+            ivNews = (ImageView) itemView.findViewById(R.id.ivImage);
             tvN_Title = (TextView) itemView.findViewById(R.id.tvTitle);
             tvDescription = (TextView) itemView.findViewById(R.id.tvDescription);
             tvAddToCalendar = (TextView) itemView.findViewById(R.id.tvAddToCalendar);

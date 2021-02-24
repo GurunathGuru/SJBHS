@@ -338,4 +338,9 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("URL", url);
         startActivity(intent);
     }
+
+    public void getAlumni(View view) {
+        Intent intent = new Intent(getApplicationContext(), AlumniActivity.class);
+        startActivity(intent);
+    }
 }

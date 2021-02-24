@@ -37,6 +37,7 @@ public class AlumniAdapter extends RecyclerView.Adapter<AlumniAdapter.MyViewHold
         final Alumni alumniItem = alumni_lists.get(position);
 
         holder.name.setText(alumniItem.getName());
+        holder.designation.setText(alumniItem.getDesignation());
         Glide.with(context)
                 .load(alumniItem.getImage())
                 .into(holder.ivImage);
@@ -50,13 +51,15 @@ public class AlumniAdapter extends RecyclerView.Adapter<AlumniAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView name;
+        private final TextView name,designation;
         private final ImageView ivImage;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.tvTitle);
+            designation = itemView.findViewById(R.id.tvDesignation);
             ivImage = itemView.findViewById(R.id.ivImage);
+
         }
     }
 }

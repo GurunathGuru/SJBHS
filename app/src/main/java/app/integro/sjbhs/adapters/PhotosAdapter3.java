@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import app.integro.sjbhs.R;
 import app.integro.sjbhs.models.Sjbhs_Photos2;
 
-/**
- * Created by gurunath on 11-01-2018.
- */
 
 public class PhotosAdapter3 extends PagerAdapter {
     private final Context context;
@@ -37,7 +34,8 @@ public class PhotosAdapter3 extends PagerAdapter {
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return sjbhsPhotos2ArrayList.size();
     }
 
@@ -65,5 +63,4 @@ public class PhotosAdapter3 extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         ((ViewPager) container).removeView((RelativeLayout) object);
     }
-
 }

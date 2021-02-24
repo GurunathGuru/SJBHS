@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     private final Context context;
     private final ArrayList<News> newsArrayList;
 
+    private static final String TAG = "NewsAdapter";
     public NewsAdapter(Context context, ArrayList<News> newsArrayList) {
         this.context = context;
         this.newsArrayList = newsArrayList;
@@ -42,6 +44,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         holder.tvN_date.setText(newsItem.getDate());
         holder.tvDescription.setText(newsItem.getDescription());
 
+        Log.d(TAG, "onBindViewHolder: "+newsArrayList.get(1).getImage());
         Glide.with(context)
                 .load(newsItem.getImage())
                 .into(holder.ivNews);
@@ -74,7 +77,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            ivNews = (ImageView) itemView.findViewById(R.id.ivNews);
+            ivNews = (ImageView) itemView.findViewById(R.id.ivImage);
             tvN_date = (TextView) itemView.findViewById(R.id.tvDate);
             tvDescription = (TextView) itemView.findViewById(R.id.tvDescription);
             tvN_Title = (TextView) itemView.findViewById(R.id.tvTitle);
