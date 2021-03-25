@@ -35,19 +35,19 @@ import retrofit2.Response;
 
 public class NewsFragment extends Fragment {
 
-    ApiServices apiServices;
-    AutoScrollViewPager vpAlumni;
-    ArrayList<Alumni> alumniArrayList;
-    AlumniViewPagerAdapter alumniAdapter;
+    private ApiServices apiServices;
+    private AutoScrollViewPager vpAlumni;
+    private ArrayList<Alumni> alumniArrayList;
+    private AlumniViewPagerAdapter alumniAdapter;
 
-    AutoScrollViewPager vpUpComingEvents;
-    ArrayList<UpComingEvents> upComingEventsArrayList;
-    UpComingEventsViewPagerAdapter upComingEventsViewPagerAdapter;
+    private AutoScrollViewPager vpUpComingEvents;
+    private ArrayList<UpComingEvents> upComingEventsArrayList;
+    private UpComingEventsViewPagerAdapter upComingEventsViewPagerAdapter;
 
     private AutoScrollViewPager vpTextMessage;
     private ArrayList<TextMessage> textMessageArrayList;
     private TextMessagePagerAdapter textMessagePagerAdapter;
-    private boolean flag = true;
+    private final boolean flag = true;
 
 
     @Override

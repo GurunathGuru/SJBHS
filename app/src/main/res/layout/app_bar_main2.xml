@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:gravity="center|start"
-                android:text=" ST. JOSEPH'S BOYS' HIGH SCHOOL"
+                android:text=" ST JOSEPH'S BOYS' HIGH SCHOOL"
                 android:textColor="@color/colorWhite"
                 app:fontFamily="@string/font_Title"
                 android:textSize="20sp"

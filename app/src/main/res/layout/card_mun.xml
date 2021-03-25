@@ -61,7 +61,7 @@
                 android:fontFamily="@string/font_Title"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Add to Calender"
+                android:text="Add to Calendar"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 android:textStyle="bold" />

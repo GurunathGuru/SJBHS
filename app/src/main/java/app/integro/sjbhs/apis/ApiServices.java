@@ -24,7 +24,7 @@ import retrofit2.http.POST;
 
 public interface ApiServices {
 
-    @GET("sjbhs_coverphoto.php")
+    @GET("https://sjbhs.edu.in/sjbhs_app/sjbhs_coverphoto.php")
     Call<CoverPhotoList> getCoverPhotoList();
 
     @GET("sjbhs_leadership.php")

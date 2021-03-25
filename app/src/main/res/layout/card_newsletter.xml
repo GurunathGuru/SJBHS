@@ -55,7 +55,7 @@
                     android:layout_margin="10sp"
                     android:background="@color/colorOrange"
                     android:gravity="center"
-                    android:text="Add To Calender"
+                    android:text="Add To Calendar"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
                     android:fontFamily="@string/font_Title" />
