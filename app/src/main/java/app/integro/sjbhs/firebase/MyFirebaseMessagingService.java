@@ -63,7 +63,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         try {
             String body = data.get("body");
             Intent intent = null;
-
             String title = null;
             String img = null;
             String description = null;

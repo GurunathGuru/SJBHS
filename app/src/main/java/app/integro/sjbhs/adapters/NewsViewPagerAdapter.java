@@ -6,6 +6,7 @@ import android.content.Intent;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,18 +51,25 @@ public class NewsViewPagerAdapter extends PagerAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.card_newsviewpager, container, false);
 
-        ivNews =  itemView.findViewById(R.id.ivImage);
-        rlNews =  itemView.findViewById(R.id.rlNews);
-        tvNews =  itemView.findViewById(R.id.tvTitle);
+        ivNews = itemView.findViewById(R.id.ivImage);
+        rlNews = itemView.findViewById(R.id.rlNews);
+        tvNews = itemView.findViewById(R.id.tvTitle);
         final News newsItem = newsArrayList.get(position);
 
         tvNews.setText(newsItem.getTitle());
 
-       // Log.d(TAG, "instantiateItem: "+newsArrayList.get(0).getImage());
-        Glide.with(context)
-                .load(newsItem.getImage())
-                .placeholder(R.drawable.bg_placeholder)
-                .into(ivNews);
+        // Log.d(TAG, "instantiateItem: "+newsArrayList.get(0).getImage());
+        String imageUrl = newsItem.getImage();
+        Log.d(TAG, "instantiateItem: " + imageUrl);
+        if (imageUrl.equals("")) {
+            Glide.with(context)
+                    .load(R.drawable.sjbhs_building)
+                    .into(ivNews);
+        } else {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .into(ivNews);
+        }
         rlNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

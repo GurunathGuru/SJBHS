@@ -90,10 +90,16 @@ public class NewsDetailActivity extends AppCompatActivity {
                         } else {
                             vpNewsImages.setVisibility(View.GONE);
                             ivImages.setVisibility(View.VISIBLE);
-                            Glide.with(getApplicationContext())
-                                    .load(newsItem.getImage())
-                                    .placeholder(R.drawable.bg_placeholder)
-                                    .into(ivImages);
+
+                            if (newsItem.getImage().equals("")) {
+                                Glide.with(getApplicationContext())
+                                        .load(R.drawable.sjbhs_building)
+                                        .into(ivImages);
+                            } else {
+                                Glide.with(getApplicationContext())
+                                        .load(newsItem.getImage())
+                                        .into(ivImages);
+                            }
                         }
                     } else {
                         Toast.makeText(getApplicationContext(), "NO ITEMS FOUND", Toast.LENGTH_LONG).show();

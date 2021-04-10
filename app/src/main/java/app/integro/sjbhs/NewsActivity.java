@@ -34,8 +34,7 @@ public class NewsActivity extends AppCompatActivity {
 
         rvNews = (RecyclerView) findViewById(R.id.rvNews);
         tvNoItems=findViewById(R.id.tvNoItems);
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(getApplicationContext());
-        rvNews.setLayoutManager(manager);
+        rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         newsArrayList = new ArrayList<>();
         getNews();
     }

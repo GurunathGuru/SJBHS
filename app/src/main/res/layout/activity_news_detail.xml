@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="app.integro.sjbhs.NewsDetailActivity">
 
     <ImageView
@@ -30,15 +30,14 @@
                 <ImageView
                     android:id="@+id/ivImages"
                     android:layout_width="match_parent"
-                    android:layout_height="315dp"
+                    android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bg_placeholder"
                     android:visibility="gone" />
 
                 <com.github.demono.AutoScrollViewPager
                     android:id="@+id/vpNewsImages"
                     android:layout_width="match_parent"
-                    android:layout_height="315sp" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/tvDate"

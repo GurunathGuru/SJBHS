@@ -26,6 +26,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     private final ArrayList<News> newsArrayList;
 
     private static final String TAG = "NewsAdapter";
+
     public NewsAdapter(Context context, ArrayList<News> newsArrayList) {
         this.context = context;
         this.newsArrayList = newsArrayList;
@@ -44,11 +45,16 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         holder.tvN_date.setText(newsItem.getDate());
         holder.tvDescription.setText(newsItem.getDescription());
 
-        Log.d(TAG, "onBindViewHolder: "+newsArrayList.get(1).getImage());
-        Glide.with(context)
-                .load(newsItem.getImage())
-                .into(holder.ivNews);
+        Log.d(TAG, "onBindViewHolder: " + newsArrayList.get(1).getImage());
 
+        String imageUrl = newsArrayList.get(position).getImage();
+        if (imageUrl != null) {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .into(holder.ivNews);
+        } else {
+            holder.ivNews.setVisibility(View.GONE);
+        }
         holder.llNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
